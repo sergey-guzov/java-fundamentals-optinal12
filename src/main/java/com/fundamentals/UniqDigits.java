@@ -1,23 +1,22 @@
 package com.fundamentals;
 
-public class DigitDiff {
+public class UniqDigits {
 
-    public static String minDiffnumber (String[] array ) {
+    public static String uniqSymbols (String[] array ) {
         Integer [] numberOfDiffsymbols = new Integer[array.length];
         for (int i = 0; i < array.length; i++) {
             numberOfDiffsymbols[i] = calculateNumberOfUniqSymbols(array[i]);
-            System.out.println("Number of uniq symbols for " + i + " = " + numberOfDiffsymbols[i] );
+            System.out.print("\nNumber of uniq symbols for " + i + " = " + numberOfDiffsymbols[i] );
         }
         int max = numberOfDiffsymbols[0];
         for (Integer numberOfDiffsymbol : numberOfDiffsymbols) {
             if (numberOfDiffsymbol > max) max = numberOfDiffsymbol;
         }
-        System.out.println("Max number of uniq = " +  max);
+        System.out.print("\nMax number of uniq = " +  max);
         int n = 0;
         while (numberOfDiffsymbols[n]!=max) {
             n= n+1;
         }
-        System.out.println("The first number with max of uniq =  " + array[n]);
         return array[n];
 
     }

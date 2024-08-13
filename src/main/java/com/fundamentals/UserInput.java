@@ -20,6 +20,7 @@ public class UserInput {
             Integer c = sc.nextInt();        // Math.abs can be added here to ignore "-"
             array[i] = c.toString();
         }
+        sc.close();
         return array;
     }
 }
